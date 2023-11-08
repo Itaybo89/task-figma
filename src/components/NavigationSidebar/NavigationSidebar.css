@@ -1,0 +1,132 @@
+.box .group {
+  background-image: url(../../../static/img/rectangle-5.svg);
+  background-size: 100% 100%;
+  height: 940px;
+  left: 0;
+  position: sticky;
+  top: 0;
+  width: 300px;
+}
+
+.box .overlap-group-wrapper {
+  height: 60px;
+  left: 15px;
+  position: absolute;
+  top: 35px;
+  width: 272px;
+}
+
+.box .overlap-group {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  height: 60px;
+  position: relative;
+  width: 270px;
+}
+
+.box .icon-instance-node {
+  height: 28px !important;
+  left: 20px !important;
+  position: absolute !important;
+  top: 16px !important;
+  width: 28px !important;
+}
+
+.box .text-wrapper {
+  color: var(--white-color);
+  font-family: "Satoshi-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  height: 27px;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+}
+
+.box .div {
+  height: 60px;
+  left: 15px;
+  position: absolute;
+  top: 185px;
+  width: 272px;
+  border-radius: 10px;
+}
+
+.box .text-wrapper-2 {
+  color: var(--body-text-color);
+  font-family: "Satoshi-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  height: 27px;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+}
+
+.box .group-2 {
+  height: 60px;
+  left: 15px;
+  position: absolute;
+  top: 110px;
+  width: 272px;
+  border-radius: 10px;
+}
+
+.box .text-wrapper-3 {
+  color: var(--body-text-color);
+  font-family: "Satoshi-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  height: 27px;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+}
+
+.box .group-3 {
+  height: 60px;
+  left: 15px;
+  position: absolute;
+  top: 335px;
+  width: 272px;
+  border-radius: 10px;
+}
+
+.box .group-4 {
+  height: 60px;
+  left: 15px;
+  position: absolute;
+  top: 260px;
+  width: 272px;
+  border-radius: 10px;
+}
+
+.box .div:hover,
+.box .group-2:hover,
+.box .group-3:hover,
+.box .group-4:hover {
+  background-color: #1f32d6;
+  cursor: pointer;
+}
+
+.box .div:hover .text-wrapper-2,
+.box .group-2:hover .text-wrapper-3,
+.box .group-3:hover .text-wrapper-3,
+.box .group-4:hover .text-wrapper-3 {
+  color: #ffffff;
+}
+
+.box .overlap-group-wrapper:hover .overlap-group {
+  cursor: pointer;
+  background-color: #1f32d6;
+}
+
+.box .overlap-group-wrapper:hover .text-wrapper {
+  color: #ffffff;
+}

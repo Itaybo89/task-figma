@@ -1,0 +1,1 @@
+export { VuesaxBoldSearchNormal } from "./VuesaxBoldSearchNormal";
