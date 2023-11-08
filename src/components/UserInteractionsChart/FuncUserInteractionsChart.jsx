@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
@@ -8,7 +8,6 @@ const FuncUserInteractionsChart = () => {
   const options = {
     chart: {
       type: "column",
-      reflow: true,
     },
     title: {
       text: "User Interface",
@@ -58,25 +57,6 @@ const FuncUserInteractionsChart = () => {
       },
     ],
   };
-
-  useEffect(() => {
-    let resizeTimeout;
-
-    const resizeChart = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (chartRef && chartRef.current) {
-          chartRef.current.chart.reflow();
-        }
-      }, 500);
-    };
-
-    window.addEventListener("resize", resizeChart);
-
-    resizeChart();
-
-    return () => window.removeEventListener("resize", resizeChart);
-  }, []);
 
   return (
     <div id="popularity-div" style={{ height: "100%", width: "100%" }}>

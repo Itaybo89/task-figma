@@ -2,13 +2,15 @@ import React from "react";
 
 function FuncQueriesIndicator() {
   return (
+
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="639"
-      height="585"
-      fill="none"
-      viewBox="0 0 355 325"
-    >
+    xmlns="http://www.w3.org/2000/svg"
+    width="450"
+    height="325"
+    fill="none"
+    viewBox="0 0 355 325"
+  >
+    
       <mask id="path-1-inside-1_37_4095" fill="#fff">
         <path d="M0 40C0 21.144 0 11.716 5.858 5.858 11.716 0 21.144 0 40 0h275c18.856 0 28.284 0 34.142 5.858C355 11.716 355 21.144 355 40v245c0 18.856 0 28.284-5.858 34.142C343.284 325 333.856 325 315 325H40c-18.856 0-28.284 0-34.142-5.858C0 313.284 0 303.856 0 285V40z"></path>
       </mask>

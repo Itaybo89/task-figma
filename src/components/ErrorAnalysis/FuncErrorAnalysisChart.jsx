@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const FuncErrorAnalysis = () => {
   const errorData = [600, 800, 1000, 1050, 900, 700, 500];
   const [timeFrame, setTimeFrame] = useState("Month");
-  const chartRef = useRef(null);
 
   const options = {
     chart: {
@@ -62,25 +61,6 @@ const FuncErrorAnalysis = () => {
     ],
   };
 
-  useEffect(() => {
-    let resizeTimeout;
-
-    const resizeChart = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (chartRef && chartRef.current) {
-          chartRef.current.chart.reflow();
-        }
-      }, 500);
-    };
-
-    window.addEventListener("resize", resizeChart);
-
-    resizeChart();
-
-    return () => window.removeEventListener("resize", resizeChart);
-  }, []);
-
   const handleTimeFrameChange = (event) => {
     setTimeFrame(event.target.value);
   };
@@ -111,7 +91,6 @@ const FuncErrorAnalysis = () => {
       <HighchartsReact
         highcharts={Highcharts}
         options={options}
-        ref={chartRef}
       />
     </div>
   );

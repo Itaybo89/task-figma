@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
@@ -9,7 +9,6 @@ const FuncProductPopularity = () => {
   const options = {
     chart: {
       type: "column",
-      reflow: true,
     },
     title: {
       text: "Product Popularity",
@@ -67,25 +66,6 @@ const FuncProductPopularity = () => {
       },
     ],
   };
-
-  useEffect(() => {
-    let resizeTimeout;
-
-    const resizeChart = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (chartRef && chartRef.current) {
-          chartRef.current.chart.reflow();
-        }
-      }, 500);
-    };
-
-    window.addEventListener("resize", resizeChart);
-
-    resizeChart();
-
-    return () => window.removeEventListener("resize", resizeChart);
-  }, []);
 
   const handleTimeFrameChange = (event) => {
     setTimeFrame(event.target.value);

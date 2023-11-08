@@ -1,14 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import heatmap from "highcharts/modules/heatmap";
-import { useRef } from "react";
 
 heatmap(Highcharts);
 
 const FuncHeatMapComponent = () => {
-  const chartRef = useRef(null);
-
   const dataMatrix = [
     [9, 8, 1, 6, 5, 2, 5, 9, 7],
     [6, 9, 3, 5, 8, 5, 9, 6, 8],
@@ -114,29 +111,10 @@ const FuncHeatMapComponent = () => {
     "#2E48E6",
   ];
 
-  useEffect(() => {
-    const resizeChart = () => {
-      console.log("Resize event fired");
-      if (chartRef.current && chartRef.current.chart) {
-        chartRef.current.chart.reflow();
-      }
-    };
-
-    window.addEventListener("resize", resizeChart);
-
-    resizeChart();
-
-    return () => window.removeEventListener("resize", resizeChart);
-  }, []);
-
   return (
     <div>
       <div style={{ width: "100%", height: "400px" }}>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={options}
-          ref={chartRef}
-        />
+        <HighchartsReact highcharts={Highcharts} options={options} />
       </div>
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "5px" }}

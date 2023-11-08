@@ -4,8 +4,8 @@ function FuncDurationIndicator() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="639"
-      height="585"
+      width="450"
+      height="325"
       fill="none"
       viewBox="0 0 355 325"
     >

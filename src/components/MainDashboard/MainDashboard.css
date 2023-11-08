@@ -1,10 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .main-dashboard {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr) 1.3fr;
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr); /* Adjust this if you want smaller or larger columns */
+  grid-template-rows: repeat(3, 1fr); /* Adjust the 1.3fr to 1fr to make the last row smaller */
   height: 100%;
+  width: 100%;
   gap: 40px;
   margin-right: 40px;
 }
@@ -23,9 +28,9 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  height: 100%;
-  width: 100%;
-  gap: 20px;
+  height:325px;
+  width: 750px;
+
 }
 
 .indicator {
@@ -37,8 +42,8 @@
   justify-content: center;
   padding: 0;
   margin: 0;
-  height: 100%;
-  width: 100%;
+  height: fit-content;
+
 }
 
 .duration-indicator {
@@ -49,4 +54,13 @@
 .queries-indicator {
   height: 100% !important;
   width: 100% !important;
+}
+
+
+.group-1, .group-2 {
+  height: auto; /* Adjust based on content */
+  width: auto; /* Adjust based on content */
+  /* Remove fixed width and height if you want the content to dictate the size */
+  justify-content: center;
+  align-items: center;
 }

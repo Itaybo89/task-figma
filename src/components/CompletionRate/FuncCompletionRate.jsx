@@ -82,6 +82,7 @@ const FuncCompletionRate = () => {
             opacity: 1,
           },
         },
+        responsive: false, // Disable resize functionality
       },
     },
     series: [
@@ -93,25 +94,6 @@ const FuncCompletionRate = () => {
       },
     ],
   };
-
-  useEffect(() => {
-    let resizeTimeout;
-
-    const resizeChart = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (chartRef && chartRef.current) {
-          chartRef.current.chart.reflow();
-        }
-      }, 500);
-    };
-
-    window.addEventListener("resize", resizeChart);
-
-    resizeChart();
-
-    return () => window.removeEventListener("resize", resizeChart);
-  }, []);
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between", width: "100%", height: "100%" }}>

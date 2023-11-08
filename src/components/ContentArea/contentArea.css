@@ -1,11 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .content-area {
   display: grid;
   background-color: #f7f7f7;
   grid-template-rows: 100px auto;
   grid-template-columns: 300px 1fr;
   gap: 40px;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   box-sizing: border-box;
   overflow: auto;
 }
