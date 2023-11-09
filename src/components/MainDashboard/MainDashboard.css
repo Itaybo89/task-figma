@@ -6,8 +6,8 @@
 
 .main-dashboard {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(650px, 1fr)) !important;
-  grid-template-rows: repeat(auto-fill, minmax(325px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(325px, 1fr)) ;
   height: 100vh;
   width: 100%;
   gap: 40px;
