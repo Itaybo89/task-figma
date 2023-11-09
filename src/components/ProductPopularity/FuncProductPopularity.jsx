@@ -1,14 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const FuncProductPopularity = () => {
-  const chartRef = useRef(null);
   const [timeFrame, setTimeFrame] = useState("Month");
 
   const options = {
     chart: {
       type: "column",
+      height: 325,
+      width: 650,
     },
     title: {
       text: "Product Popularity",
@@ -72,17 +73,19 @@ const FuncProductPopularity = () => {
   };
 
   return (
-    <div id="container" className="chart-container">
+    <div
+      id="container"
+      className="chart-container"
+      style={{ height: "325", width: "650" }}
+    >
       <style>
         {`
           .chart-container {
-            height: 100%;
-            width: 100%;
             position: relative;
           }
 
           .highcharts-container {
-            height: 100% !important; // Ensure chart div resizes to the entire height
+            height: 100% !important;
           }
         `}
       </style>
@@ -107,7 +110,6 @@ const FuncProductPopularity = () => {
       <HighchartsReact
         highcharts={Highcharts}
         options={options}
-        ref={chartRef}
         containerProps={{ style: { width: "100%", height: "100%" } }}
       />
     </div>

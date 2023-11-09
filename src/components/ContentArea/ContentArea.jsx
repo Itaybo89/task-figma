@@ -10,10 +10,10 @@ function ContentArea() {
   return (
     <div className="content-area">
       <div className="nav-up">
-      <UpperSidebar />
+        <UpperSidebar />
       </div>
       <div className="nav-side">
-      <NavigationSidebar />
+        <NavigationSidebar />
       </div>
       <main className="main-content">
         <Routes>

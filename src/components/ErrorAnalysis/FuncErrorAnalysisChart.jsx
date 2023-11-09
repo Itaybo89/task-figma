@@ -10,7 +10,8 @@ const FuncErrorAnalysis = () => {
     chart: {
       type: "areaspline",
       zoomType: "x",
-      height: 600,
+      height: 325,
+      width: 650,
     },
     title: {
       text: "Error Analysis",
@@ -68,13 +69,13 @@ const FuncErrorAnalysis = () => {
   return (
     <div
       id="container"
-      style={{ height: "100%", width: "100%", position: "relative" }}
+      style={{ height: "325px", width: "650px", position: "relative" }}
     >
       <div
         style={{
           position: "absolute",
           top: "10px",
-          right: "60px",
+          right: "10px",
           zIndex: 1000,
         }}
       >
@@ -88,10 +89,7 @@ const FuncErrorAnalysis = () => {
           <option value="Year">Year</option>
         </select>
       </div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={options}
-      />
+      <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );
 };

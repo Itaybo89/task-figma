@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import "./FuncCompletionRate.css";
 
 const FuncCompletionRate = () => {
-  const chartRef = useRef(null);
-
   const colors = {
     blue: "#3b5cf6",
     green: "#39d17b",
@@ -24,29 +22,10 @@ const FuncCompletionRate = () => {
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
+      height: 325,
+      width: 650,
       style: {
         fontFamily: "Arial",
-      },
-      events: {
-        load: function () {
-          this.renderer
-            .text(
-              "Completion",
-              this.plotLeft + this.plotWidth * 0.5,
-              this.plotTop + this.plotHeight * 0.5
-            )
-            .attr({
-              "text-anchor": "middle",
-              "font-size": "16px",
-              "font-weight": "bold",
-              fill: "#959aa6",
-            })
-            .css({
-              width: this.plotWidth,
-              color: "#333333",
-            })
-            .add();
-        },
       },
     },
     title: {
@@ -70,9 +49,24 @@ const FuncCompletionRate = () => {
         allowPointSelect: false,
         cursor: "pointer",
         dataLabels: {
-          enabled: false,
+          enabled: true,
+          formatter: function () {
+            if (this.point.name === "Completions") {
+              return `<b>${this.point.name}</b>`;
+            }
+            return "";
+          },
+          style: {
+            color:
+              (Highcharts.theme && Highcharts.theme.contrastTextColor) ||
+              "black",
+            textOverflow: "ellipsis",
+            fontWeight: "normal",
+            fontSize: "13px",
+          },
+          distance: -100,
         },
-        showInLegend: false,
+        showInLegend: true,
         startAngle: 125,
         states: {
           hover: {
@@ -82,9 +76,9 @@ const FuncCompletionRate = () => {
             opacity: 1,
           },
         },
-        responsive: false, // Disable resize functionality
       },
     },
+
     series: [
       {
         name: "Share",
@@ -96,23 +90,29 @@ const FuncCompletionRate = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", width: "100%", height: "100%" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        height: "325",
+        width: "650",
+      }}
+    >
       <div style={{ flex: 1, width: "100%", height: "100%" }}>
         <HighchartsReact
           highcharts={Highcharts}
           options={options}
-          ref={chartRef}
           containerProps={{ style: { width: "100%", height: "100%" } }}
         />
       </div>
-      <div className="legend" style={{ width: "30%", height: "80%", marginLeft: "10px", marginTop: "250px" }}>
+      <div className="legend">
         {data.map((item, index) => (
           <div key={index} className="legend-item">
             <div
               className="legend-color"
               style={{ backgroundColor: item.color }}
             ></div>
-            <div>{item.name}</div>
+            <div className="legend-text">{item.name}</div>
           </div>
         ))}
       </div>

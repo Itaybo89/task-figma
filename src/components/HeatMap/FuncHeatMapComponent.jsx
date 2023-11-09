@@ -1,4 +1,3 @@
-import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import heatmap from "highcharts/modules/heatmap";
@@ -26,7 +25,8 @@ const FuncHeatMapComponent = () => {
       marginTop: 40,
       marginBottom: 80,
       plotBorderWidth: 1,
-      width: 1200,
+      height: 325,
+      width: 650,
     },
     title: {
       text: "Peak Interaction Times",
@@ -113,7 +113,7 @@ const FuncHeatMapComponent = () => {
 
   return (
     <div>
-      <div style={{ width: "100%", height: "400px" }}>
+      <div style={{ height: "325", width: "650" }}>
         <HighchartsReact highcharts={Highcharts} options={options} />
       </div>
       <div
