@@ -7,15 +7,14 @@
 .App {
   text-align: center;
   height: 100%;
-  width: 100%;
   overflow: hidden;
+  min-width: 100%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -31,5 +30,3 @@
 .App-link {
   color: #61dafb;
 }
-
-

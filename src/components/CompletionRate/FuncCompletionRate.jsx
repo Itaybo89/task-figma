@@ -78,7 +78,6 @@ const FuncCompletionRate = () => {
         },
       },
     },
-
     series: [
       {
         name: "Share",
@@ -90,15 +89,8 @@ const FuncCompletionRate = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        height: "325",
-        width: "650",
-      }}
-    >
-      <div style={{ flex: 1, width: "100%", height: "100%" }}>
+    <div className="chart-container">
+      <div className="chart">
         <HighchartsReact
           highcharts={Highcharts}
           options={options}

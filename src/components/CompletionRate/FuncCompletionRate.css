@@ -1,46 +1,40 @@
-.container {
+.chart-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  height: 325px;
+  width: 650px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .chart {
-  flex: 1;
+  flex: 0 0 auto;
   width: 70%;
   height: 100%;
-  margin-left: 20px;
 }
 
 .legend {
+  flex: 0 0 auto;
   width: 30%;
-  height: 80%;
-  margin-top: 100px;
-  position: relative;
-  right: 15%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .legend-item {
-  display: flex;
-  align-items: center;
   margin-bottom: 10px;
 }
 
 .legend-color {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
+  display: inline-block;
 }
 
-.tooltip-name {
-  color: #959aa6;
-}
-
-.tooltip-value {
-  font-weight: bold;
-  font-size: larger;
-  color: black;
+.legend-text {
 }

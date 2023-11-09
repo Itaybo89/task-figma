@@ -34,7 +34,6 @@ const FuncUserInteractionsChart = () => {
     },
     plotOptions: {
       column: {
-        
         pointPadding: 0,
         groupPadding: 0.2,
         borderWidth: 20,
@@ -59,7 +58,10 @@ const FuncUserInteractionsChart = () => {
   };
 
   return (
-    <div id="popularity-div" style={{ height: "325", width: "650" }}>
+    <div
+      id="popularity-div"
+      style={{ height: "325", width: "650", zIndex: "9999" }}
+    >
       <HighchartsReact
         highcharts={Highcharts}
         options={options}
