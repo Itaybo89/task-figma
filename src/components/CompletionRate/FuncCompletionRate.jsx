@@ -46,6 +46,7 @@ const FuncCompletionRate = () => {
     },
     plotOptions: {
       pie: {
+        showInLegend: false,
         allowPointSelect: false,
         cursor: "pointer",
         dataLabels: {
@@ -64,9 +65,8 @@ const FuncCompletionRate = () => {
             fontWeight: "normal",
             fontSize: "13px",
           },
-          distance: -100,
+          distance: -125,
         },
-        showInLegend: true,
         startAngle: 125,
         states: {
           hover: {

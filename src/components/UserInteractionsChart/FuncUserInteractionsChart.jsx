@@ -34,10 +34,11 @@ const FuncUserInteractionsChart = () => {
     },
     plotOptions: {
       column: {
+        
         pointPadding: 0,
-        groupPadding: 0.25,
-        borderWidth: 40,
-        borderRadius: 25,
+        groupPadding: 0.2,
+        borderWidth: 20,
+        borderRadius: 15,
         states: {
           hover: {
             enabled: true,

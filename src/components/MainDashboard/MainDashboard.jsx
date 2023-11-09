@@ -68,7 +68,6 @@ const MainDashboard = () => {
       <CombinedIndicators />
       <CompletionRateChart />
       <ProductPopularityChart />
-
       <ErrorAnalysisChart />
       <PeakInteractionTimesChart />
     </div>
