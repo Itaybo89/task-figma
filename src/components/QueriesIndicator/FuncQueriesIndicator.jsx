@@ -5,7 +5,7 @@ function FuncQueriesIndicator() {
 
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="450"
+    width="325"
     height="325"
     fill="none"
     viewBox="0 0 355 325"
